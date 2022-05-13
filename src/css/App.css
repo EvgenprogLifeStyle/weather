@@ -1,0 +1,9 @@
+.item-sun__text {
+    flex: 0 0 50px;
+}
+.body-search {
+    margin: 0 37px;
+    padding: 10px 0 4px;
+    border-bottom: 1px solid;
+    display: inline-block;
+}
