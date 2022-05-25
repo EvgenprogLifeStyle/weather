@@ -9,9 +9,10 @@ function Show() {
         </div>
     );
 }
+
 function toggle() {
-    let showGrid = document.querySelector(".page__list");
-    let showFlex = document.querySelector(".page__week");
+    const showGrid = document.querySelector(".page__list");
+    const showFlex = document.querySelector(".page__week");
 
     if (showGrid.classList.contains("_active")) {
         showFlex.classList.add("_active");
@@ -21,4 +22,5 @@ function toggle() {
         showGrid.classList.add("_active");
     }
 }
+
 export default Show;

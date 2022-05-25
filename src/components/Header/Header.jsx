@@ -1,14 +1,12 @@
 import React from "react";
-import imgI from "../img/02d.png";
-const Header = (props) => {
-    let item = props.top.current;
-    let img = "img/icons/weather/" + item.weather[0].icon + ".png";
+import imgNewUrl from "../../assets/imgIcon";
 
+const Header = (props) => {
+    const item = props.top.current;
     return (
         <div className="page__top top-page">
             <div className="top-page__img">
-                {/* <img src={imgI} alt={item.weather[0].description} /> */}
-                <img src={img} alt={item.weather[0].description} />
+                <img src={imgNewUrl(item.weather[0].icon)} alt={item.weather[0].description}/>
             </div>
             <div className="top-page__temp">
                 {Math.round(item.temp)}
@@ -19,7 +17,7 @@ const Header = (props) => {
                     {JSON.parse(localStorage.getItem("weather")).city}, <span> {JSON.parse(localStorage.getItem("weather")).country}</span>
                 </div>
                 <div className="top-page__time">{new Date().toLocaleTimeString().slice(0, -3)}</div>
-                <div className="top-page__date" style={{ fontSize: 18 }}>
+                <div className="top-page__date" style={{fontSize: 18}}>
                     {item.weather[0].description}
                 </div>
             </div>
